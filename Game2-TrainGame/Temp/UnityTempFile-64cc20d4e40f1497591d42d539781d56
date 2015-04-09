@@ -47,5 +47,6 @@
 'Assets/Scripts/Draggable.cs'
 'Assets/Scripts/HeadGizmo.cs'
 'Assets/Scripts/Movable.cs'
+'Assets/Scripts/Rotatable.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'

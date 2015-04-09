@@ -13,5 +13,6 @@ public class Movable : MonoBehaviour {
 		position = new Vector3( pos_move.x, pos_move.y, pos_move.z );
 		this.transform.position = position;
 
+		Debug.Log(position);
 	}
 }
