@@ -1,6 +1,6 @@
 ###Player character
 - Rigidbody: **done**
-- Health
+- Health: **done**
 
 ###Click a person to hide behind & converse with them
 - Click: **done**
