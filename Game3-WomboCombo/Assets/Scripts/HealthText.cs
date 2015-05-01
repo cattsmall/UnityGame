@@ -17,7 +17,7 @@ public class HealthText : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		health = playerHealth.health;
 		healthString = health.ToString();
 		healthTextObject.text = "Health: " + healthString;
 	}

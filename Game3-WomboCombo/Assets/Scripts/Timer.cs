@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour {
 	}
 
 	void Update () {
-	  if(time > 0) {
+	  if(time > 0 && playerhealth.health > 0) {
 	  	time -= Time.deltaTime;
 	  } else {
 	  	StartCoroutine(playerhealth.kill());
