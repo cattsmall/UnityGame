@@ -4,9 +4,10 @@ using UnityEngine;
 using System.Collections;
 
 public class PlayerMouseInput : MonoBehaviour {
-
+	public bool movable = true;
 	public Vector3 targetPos;
 	PlayerMovement movement;
+
 	void Start () {
 		movement = GetComponent<PlayerMovement>();
 	}
@@ -14,7 +15,7 @@ public class PlayerMouseInput : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		if (Input.GetMouseButtonDown(0)){
+		if (Input.GetMouseButtonDown(0) && movable){
 			Ray cursorRay= Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit cursorRayHit= new RaycastHit();
 		
@@ -26,6 +27,8 @@ public class PlayerMouseInput : MonoBehaviour {
 			targetPos.y=transform.position.y;
 			transform.LookAt(targetPos);
 			movement.Move(targetPos);
+		} else if (!movable) {
+			movement.StopMoving();
 		}
 
 	}

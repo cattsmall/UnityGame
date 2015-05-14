@@ -3,7 +3,6 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent (typeof (Nonplayer))]
 public class NonplayerDriver : MonoBehaviour {
 	Vector3 direction;
 	public bool moving = false;
@@ -59,6 +58,6 @@ public class NonplayerDriver : MonoBehaviour {
 	}
 
 	void OnDrawGizmos() {
-    	Gizmos.DrawRay(transform.position, transform.forward*20);
+    	// Gizmos.DrawRay(transform.position, transform.forward*20);
     }
 }

@@ -45,6 +45,8 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-	public void stopMoving(){
+	public void StopMoving(){
+		rigidbody.velocity = Vector3.zero;
+	    rigidbody.angularVelocity = Vector3.zero;
 	}
 }

@@ -10,15 +10,23 @@ public class PlayerHealth : MonoBehaviour {
 	
 	void Update () {
 		if (health <= 0) {
-			kill();
+			lose();
 		}
 	}
 
-	public IEnumerator kill () {
+	public IEnumerator lose () {
 		if (!hasDied) {
 			hasDied = true;
-			yield return new WaitForSeconds(5f);  // or however long you want it to wait
-			Application.LoadLevel(Application.loadedLevel);
+			yield return new WaitForSeconds(2f);  // or however long you want it to wait
+			Application.LoadLevel("LoseState");
+		}
+	}
+
+	public IEnumerator win () {
+		if (!hasDied) {
+			hasDied = true;
+			yield return new WaitForSeconds(2f);  // or however long you want it to wait
+			Application.LoadLevel("WinState");
 		}
 	}
 }
