@@ -7,3 +7,4 @@
 *.booproj
 *.pidb.meta
 sysinfo.txt
+.DS_Store
