@@ -13,9 +13,9 @@
 - Raycast: **done**
 - Lose Health: **done**
 - Rigidbody: **done**
-- Move to player
-- Game over state:
-- Cone of vision
+- Move to player: 
+- Game over state: **done**
+- Cone of vision: **done**
 
 ###If you go the length of the party without being spotted, you win
 - Time var: **done**

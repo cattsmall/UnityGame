@@ -3,7 +3,12 @@ using System.Collections;
 
 public class ExPartner: MonoBehaviour {
 	public PlayerHealth playerHealth;
+    public CamShake camshake;
 	public string prevObjName;
+
+    void Start() {
+        camshake = GameObject.Find("Main Camera").GetComponent<CamShake>();
+    }
 
 	void Update() {
 		transform.LookAt(GameObject.Find("Player").transform.position);
@@ -14,6 +19,7 @@ public class ExPartner: MonoBehaviour {
 
         	if (prevObjName != "Player" && hit.collider.gameObject.name == "Player") {
 	        	playerHealth.health--;
+                camshake.TriggerShake();
 	        }
 
 	        prevObjName = hit.collider.gameObject.name;
